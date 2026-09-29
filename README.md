@@ -113,5 +113,3 @@ The root page is now a dedicated WhatsApp connection page, separate from the rea
 - The connection page is protected by `DASHBOARD_TOKEN` just like the dashboard, so the QR/pairing controls are not public.
 
 After deployment, open the service root (for example `/` with the token query parameter) for connection, and `/dashboard` for the separate read-only dashboard.
-# Bot
-# Bot
