@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: novabot-readonly-dashboard
+    env: docker
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: BOT_NAME
+        value: NovaBot
+      - key: PREFIX
+        value: .
+      - key: OWNER_NUMBER
+        sync: false
+      - key: AI_ENABLED
+        value: "false"
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5.6-luna
+      - key: AI_IN_GROUPS
+        value: "false"
+      - key: RESPOND_IN_GROUPS
+        value: "true"
+      - key: PORT
+        value: "10000"
+      - key: AUTH_PATH
+        value: /var/data/.wwebjs_auth
+      - key: DATA_PATH
+        value: /var/data/data
+      - key: DASHBOARD_TOKEN
+        generateValue: true
+    disk:
+      name: novabot-data
+      mountPath: /var/data
+      sizeGB: 1
