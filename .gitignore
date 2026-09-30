@@ -1,5 +1,5 @@
-node_modules/
+node_modules
 .env
-.wwebjs_auth/
-data/
+auth_info_baileys
+data
 *.log
