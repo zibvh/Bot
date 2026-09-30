@@ -28,7 +28,7 @@ services:
       - key: DATA_PATH
         value: /var/data/data
       - key: DASHBOARD_TOKEN
-        generateValue: true
+        sync: false
     disk:
       name: novabot-data
       mountPath: /var/data
